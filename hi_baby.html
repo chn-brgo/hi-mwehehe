@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love 🩷</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Elegant readable font -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(#fceef3, #ffffff);
+      padding: 20px;
+      color: #333;
+      font-family: "Merriweather", serif;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .letter {
+      font-size: 18px;
+      line-height: 1.8;
+      white-space: pre-line;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d6336c;
+      font-family: "Merriweather", serif;
+    }
+
+    .card {
+      margin: 36px auto;
+      padding: 28px;
+      text-align: center;
+      background: #fff0f3;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card button {
+      font-size: 18px;
+      padding: 12px 32px;
+      margin: 10px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background: #ff4d6d;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background: #ff85a1;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .heart {
+      position: fixed;
+      bottom: 20px;
+      font-size: 24px;
+      animation: floatUp 2s ease forwards;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { opacity: 1; transform: translateY(0) scale(1); }
+      100% { opacity: 0; transform: translateY(-150px) scale(1.5); }
+    }
+
+    @media (max-width: 500px) {
+      .letter {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="letter">
+Hi Daba,
+
+Happy first monthsary 🩷
+Ang sarap sabihin ulit no? This time, it doesn’t feel fragile or unsure. It feels calm. Totoo. Parang alam ng puso ko kung nasaan siya dapat.
+
+This past month with you has been really special to me—not because it’s loud or flashy, but because it feels right. Yung happiness na hindi kailangan iprove, hindi kailangan ipost palagi, pero ramdam mo. Sa simpleng moments lang: sa tawa mo, sa kwentuhan natin, sa tahimik na magkasama lang tayo. Being with you feels familiar, pero at the same time, bagong-bago pa rin.
+
+What I love most about us ngayon is how intentional everything feels. Hindi tayo nagmamadali, hindi rin tayo nagpapabaya. Loving you feels like a choice I make every day—and I make it gladly. I enjoy showing up for you, listening to you, being present. Hindi out of obligation, kundi dahil gusto ko. And that brings me so much peace.
+
+You ground me in a way that’s hard to explain. Kapag kasama kita, hindi ako napapalingon sa likod—mas lalo akong nae-excite sa hinaharap. I see shared mornings, random dates, inside jokes na tayo lang ang makakaintindi, quiet nights, and plans we’ll talk about softly. With you, the future feels warm, not scary.
+
+I want you to know this: I’m genuinely excited about what we’re building. About growing together, becoming better together, and choosing each other in ways that last. Loving you makes me want to be more attentive, more patient, more intentional—not just today, but in all the days to come.
+
+Thank you for being you—for your warmth, your presence, your love. Thank you for choosing me the way that matters most: freely and sincerely. I hope you feel how deeply valued and cherished you are, not just in words like these, but in how I love you every day.
+
+And since this month means something special to us, there’s something I want to ask you—simple, but from the heart.
+</div>
+
+<div class="card">
+  <h2>Will you be my Valentine? ❤️</h2>
+  <button onclick="yesClicked()">Yes</button>
+  <button onclick="yesClicked()">Yes</button>
+</div>
+
+<div id="ending" class="letter fade-in">
+Not just for the day, but for the moments we’ll share, the laughter, the growth, and the quiet choosing of each other again and again.
+
+See you <strong>Feb 14, V-Fitness Gym</strong>, in your earliest convenience (lol).
+
+Padabaunun ko yan.
+
+I’m grateful for this month.
+I’m excited for what’s ahead.
+And I’m happiest knowing I get to move forward—with you.
+</div>
+
+</div>
+
+<script>
+  function yesClicked() {
+    document.getElementById("ending").classList.add("show");
+    for (let i = 0; i < 6; i++) createHeart();
+  }
+
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = "🩷";
+    heart.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 2000);
+  }
+</script>
+
+</body>
+</html>
